@@ -1,0 +1,1211 @@
+:root {
+    --primary-green: #28CB8B;
+    --secondary-color: #263238;
+    --blue-color: #5417D7;
+    --green-shade-color: #C8E6C9;
+    --silver-color: #F5F7FA;
+    --green-shade: #237D31;
+    --green-light-shade: #388E3B;
+    --green-dark-shade: #1B5E1F;
+    --grey-color: #4D4D4D;
+    --light-grey-color: #717171;
+}
+
+/* global css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    background-color: var(--green-light-shade);
+    color: white;
+    outline: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 400;
+    margin-top: -5px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 2px solid var(--green-light-shade);
+    transition: .5s;
+}
+
+button:hover {
+    background-color: white;
+    color: var(--green-light-shade);
+    transform: scale(.9);
+}
+
+/* global css end */
+
+/* < !-- ---------------------------------------------- nav ----------------------------------------- -- > */
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 30px auto 0;
+}
+
+nav .fa-bars {
+    display: none;
+}
+
+nav .nav-left {
+    display: flex;
+    gap: 10px;
+}
+
+nav .nav-left h1 {
+    color: var(--secondary-color);
+}
+
+nav .nav-left img {
+    width: 2.2rem;
+    position: relative;
+    top: -15px;
+}
+
+nav .nav-right {
+    display: flex;
+    gap: 20px;
+}
+
+nav .nav-right .fa-xmark {
+    display: none;
+}
+
+nav .nav-right ul {
+    display: flex;
+    gap: 20px;
+    margin-top: .4rem;
+}
+
+nav .nav-right ul li {
+    list-style: none;
+}
+
+nav .nav-right ul li a {
+    text-decoration: none;
+    color: black;
+    transition: .5s;
+}
+
+nav .nav-right ul li a:hover {
+    color: var(--green-light-shade);
+}
+
+nav .nav-right ul li a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: var(--green-light-shade);
+    margin: 5px auto;
+    transition: .5s;
+}
+
+nav .nav-right ul li a:hover::after {
+    width: 100%;
+}
+
+nav .nav-right ul li .active {
+    color: var(--green-light-shade);
+    padding-right: 30px;
+}
+
+nav .nav-right ul li .active::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: var(--green-light-shade);
+    margin: 5px auto;
+    transition: .5s;
+}
+
+nav .nav-right button .fa-arrow-right {
+    padding-left: 10px;
+    font-size: .9rem;
+}
+
+nav button {
+    height: 48px;
+    margin-left: 30px;
+}
+
+
+/* < !-- ---------------------------------------------- nav end ----------------------------------------- -- > */
+
+
+
+/* < !-- ---------------------------------------------- main ----------------------------------------- -- > */
+.main {
+    width: 100%;
+    background-color: var(--silver-color);
+    margin-top: 30px;
+}
+
+.main .main-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.main .main-wrapper .main-left {
+    flex-basis: 55%;
+    transform: translateY(-50px);
+    transition: 1s;
+    opacity: 0;
+}
+
+/* for main-left Intersection Observer */
+
+.main .main-wrapper .main-left-intersection {
+    transform: translate(0);
+    opacity: 1;
+}
+
+.main .main-wrapper .main-left h1 {
+    padding-top: 60px;
+    font-size: 4rem;
+    color: var(--grey-color);
+}
+
+.main .main-wrapper .main-left h2 {
+    font-size: 4rem;
+    color: var(--green-light-shade);
+}
+
+.main .main-wrapper .main-left p {
+    font-size: 1.1rem;
+    opacity: .8;
+    padding: 30px 0;
+}
+
+.main .main-wrapper .main-right {
+    flex-basis: 45%;
+}
+
+.main .main-wrapper .main-right img {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    transition: 2s;
+}
+
+.main .main-wrapper .main-right .image-intersection {
+    opacity: 1;
+}
+
+/* < !-- ---------------------------------------------- main end ----------------------------------------- -- > */
+
+/* < !-- ---------------------------------------------- clients ----------------------------------------- -- > */
+
+.clients {
+    text-align: center;
+    width: 80%;
+    margin: 50px auto 0;
+}
+
+.clients h1 {
+    font-size: 2rem;
+    color: var(--grey-color);
+}
+
+.clients p {
+    font-size: 1.1rem;
+    opacity: .8;
+    margin: 10px 0 40px 0;
+}
+
+.clients .clients-logo {
+    display: flex;
+    font-size: 2.5rem;
+    gap: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #388E3B;
+}
+
+/* < !-- ---------------------------------------------- clients end ----------------------------------------- -- > */
+
+/* < !-- ---------------------------------------------- community ----------------------------------------- -- > */
+
+
+.community {
+    text-align: center;
+    width: 80%;
+    margin: 100px auto 0;
+}
+
+.community h1 {
+    font-size: 2rem;
+    color: var(--grey-color);
+}
+
+.community p {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    opacity: .8;
+}
+
+.community .nextcent-uses-info {
+    margin-top: 50px;
+    display: flex;
+    row-gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.community-intersection {
+    transform: translateX(-300px);
+    transition: 1s;
+    opacity: 0;
+}
+
+.move-community-intersection {
+    transform: translate(0);
+    opacity: 1;
+}
+
+.community .nextcent-uses-info .memberships {
+    flex-basis: 30%;
+    min-width: 300px;
+    transition-delay: .6s;
+}
+
+.community .nextcent-uses-info .national {
+    flex-basis: 30%;
+    min-width: 300px;
+    transition-delay: .3s;
+}
+
+.community .nextcent-uses-info .groups {
+    flex-basis: 30%;
+    min-width: 300px;
+}
+
+.community .nextcent-uses-info .memberships,
+.community .nextcent-uses-info .national,
+.community .nextcent-uses-info .groups {
+    background-color: var(--silver-color);
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
+.community .nextcent-uses-info i {
+    font-size: 2.5rem;
+    color: var(--green-light-shade);
+    margin-bottom: 20px;
+}
+
+.community .pixelgrade-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.community .pixelgrade-info .pixelgrade-left {
+    flex-basis: 30%;
+}
+
+.community .pixelgrade-info .pixelgrade-left img {
+    height: 100%;
+    width: 100%;
+}
+
+.community .pixelgrade-info .pixelgrade-right {
+    padding-top: 50px;
+    flex-basis: 60%;
+    text-align: left;
+}
+
+.community .pixelgrade-info .pixelgrade-right h1 {
+    font-size: 2.5rem;
+}
+
+.community .pixelgrade-info .pixelgrade-right p {
+    padding-bottom: 30px;
+    line-height: 1.5rem;
+}
+
+/* < !-- ------------------------------------- community end --------------------------------------- -- > */
+
+
+/* < !-- ---------------------------------------------- help ----------------------------------------- -- > */
+
+.help-local {
+    background-color: var(--silver-color);
+    padding: 100px 0;
+    margin-top: 100px;
+}
+
+.help-local .help-local-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto 0;
+    gap: 40px;
+}
+
+.help-local .help-local-wrapper .help-left-info h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    color: var(--grey-color);
+}
+
+.help-local .help-local-wrapper .help-left-info h2 {
+    font-size: 2.5rem;
+    color: var(--green-light-shade);
+}
+
+.help-local .help-local-wrapper .help-left-info p {
+    margin-top: 30px;
+    font-size: 1.1rem;
+    opacity: .8;
+}
+
+.help-local .help-local-wrapper .help-right-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.help-local .help-local-wrapper .help-right-info .help {
+    display: flex;
+    gap: 30px;
+    width: fit-content;
+}
+
+.help-local .help-local-wrapper .help-right-info .help i {
+    font-size: 2.5rem;
+    color: var(--green-light-shade);
+}
+
+.help-local .help-local-wrapper .help-right-info .help .help-numbers h2 {
+    font-size: 2rem;
+    color: var(--grey-color);
+    margin-top: -10px;
+}
+
+.help-local .help-local-wrapper .help-right-info .help .help-numbers p {
+    font-size: 1.1rem;
+    opacity: .8;
+}
+
+/* < !-- ---------------------------------------------- help end ----------------------------------------- -- > */
+
+/* < !-- ---------------------------------------------- design ----------------------------------------- -- > */
+
+.design {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 100px auto 0;
+}
+
+.design .design-left {
+    flex-basis: 35%;
+}
+
+.design .design-left img {
+    height: 100%;
+    width: 100%;
+}
+
+.design .design-right {
+    flex-basis: 55%;
+}
+
+.design .design-right h1 {
+    font-size: 2.5rem;
+    color: var(--grey-color);
+    padding-top: 80px;
+}
+
+.design .design-right p {
+    font-size: 1.1rem;
+    opacity: .8;
+    padding: 30px 0 50px;
+}
+
+/* < !-- ---------------------------------------------- design end ----------------------------------------- -- > */
+
+
+/* < !-- ---------------------------------------------- tesla ----------------------------------------- -- > */
+
+.tesla {
+    background-color: var(--silver-color);
+    padding: 40px 0;
+    margin-top: 100px;
+}
+
+.tesla .tesla-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+
+.tesla .tesla-wrapper .tesla-left {
+    flex-basis: 30%;
+}
+
+.tesla .tesla-wrapper .tesla-left img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.tesla .tesla-wrapper .tesla-right {
+    flex-basis: 60%;
+}
+
+.tesla .tesla-wrapper .tesla-right p {
+    opacity: .8;
+    line-height: 1.5rem;
+    padding-bottom: 5px;
+}
+
+.tesla .tesla-wrapper .tesla-right h2 {
+    color: var(--green-light-shade);
+    padding: 25px 0;
+    font-size: 1.5rem;
+}
+
+.tesla .tesla-link {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tesla .tesla-link i {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.tesla .tesla-link h3 {
+    padding-top: 8px;
+    font-size: 1.5rem;
+    color: var(--grey-color);
+}
+
+.tesla .tesla-link .fa-arrow-right {
+    font-size: 1.3rem;
+    padding-left: 10px;
+}
+
+/* < !-- ---------------------------------------------- tesla end ----------------------------------------- -- > */
+
+/* < !-- ---------------------------------------------- caring ----------------------------------------- -- > */
+
+
+.caring {
+    width: 80%;
+    margin: 100px auto 0;
+    text-align: center;
+}
+
+.caring h1 {
+    font-size: 2.5rem;
+    color: var(--grey-color);
+}
+
+.caring p {
+    width: 60%;
+    margin: auto;
+    font-size: 1.1rem;
+    padding: 20px;
+    line-height: 1.6rem;
+    opacity: .8;
+}
+
+.caring .caring-info {
+    margin-top: 50px;
+    display: flex;
+    row-gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.caring .caring-info .caring-1 {
+    flex-basis: 30%;
+    position: relative;
+    cursor: pointer;
+    min-width: 300px;
+}
+
+.caring .caring-info .caring-2 {
+    flex-basis: 30%;
+    position: relative;
+    cursor: pointer;
+    min-width: 300px;
+}
+
+.caring .caring-info .caring-3 {
+    flex-basis: 30%;
+    position: relative;
+    cursor: pointer;
+    min-width: 300px;
+}
+
+.caring .caring-info .caring-1 img,
+.caring .caring-info .caring-2 img,
+.caring .caring-info .caring-3 img {
+    height: 100%;
+    width: 100%;
+}
+
+.caring .caring-info .caring-1 .caring-1-info p,
+.caring .caring-info .caring-2 .caring-2-info p,
+.caring .caring-info .caring-3 .caring-3-info p {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    padding: 30px 10px;
+    opacity: .8;
+    color: var(--grey-color);
+    font-weight: 600;
+}
+
+.caring .caring-info .caring-1 .caring-1-info h3,
+.caring .caring-info .caring-2 .caring-2-info h3,
+.caring .caring-info .caring-3 .caring-3-info h3 {
+    color: var(--green-light-shade);
+}
+
+.caring .caring-info .caring-1 .caring-1-info i,
+.caring .caring-info .caring-2 .caring-2-info i,
+.caring .caring-info .caring-3 .caring-3-info i {
+    margin-left: 5px;
+    font-size: .8rem;
+}
+
+.caring .caring-info .caring-1 .caring-1-info,
+.caring .caring-info .caring-2 .caring-2-info,
+.caring .caring-info .caring-3 .caring-3-info {
+    background-color: var(--silver-color);
+    padding-bottom: 20px;
+    border-radius: 10px;
+    width: 90%;
+    position: absolute;
+    top: 60%;
+    left: 0%;
+    transform: translate(5%, -50%);
+    opacity: 0;
+    transition: .7s;
+}
+
+.caring .caring-info .caring-1:hover .caring-1-info,
+.caring .caring-info .caring-2:hover .caring-2-info,
+.caring .caring-info .caring-3:hover .caring-3-info {
+    opacity: 1;
+    top: 50%;
+}
+
+/* < !-- -------------------------------------------- caring end ----------------------------------------- -- >*/
+
+
+/* ------------------------------------------------- testimonials --------------------------------------------- */
+
+.testimonials {
+    width: 100%;
+    height: 100%;
+    padding: 50px 0 100px 0;
+    background-image: linear-gradient(to left, #388E3B, #28CB8B);
+    text-align: center;
+    margin-top: 100px;
+}
+
+.testimonials h1 {
+    font-size: 30px;
+    color: white;
+}
+
+.slider {
+    width: 100%;
+    margin-top: 50px;
+    position: relative;
+}
+
+.overflow-maintain {
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.carousel {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.slide {
+    height: 100%;
+    min-width: 100%;
+    display: flex;
+    text-align: left;
+    gap: 50px;
+    padding: 40px;
+    background-color: var(--silver-color);
+    border-radius: 10px;
+}
+
+.slide-right h1 {
+    color: var(--green-light-shade);
+    margin-bottom: 5px;
+}
+
+.job-info {
+    margin-top: 20px;
+}
+
+.slide-left img {
+    height: 150px;
+    border: 3px solid var(--green-light-shade);
+    border-radius: 50%;
+}
+
+.btn {
+    position: absolute;
+    cursor: pointer;
+}
+
+.prev-btn {
+    left: 13%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.next-btn {
+    right: 13%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.track {
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background-color: black;
+    position: absolute;
+    bottom: -20%;
+}
+
+/* --------------------------------------------- testimonials end---------------------------------------------- */
+
+/* < !-- ---------------------------------------------- footer ----------------------------------------- -- > */
+
+
+footer {
+    margin-top: 100px;
+}
+
+.footer h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--grey-color);
+}
+
+.footer button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 30px;
+}
+
+.footer button i {
+    font-size: .8rem;
+    padding: 2px 0 0 10px;
+}
+
+.footer .footer-list {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    width: 100%;
+    background-color: var(--secondary-color);
+    padding: 50px 10% 70px;
+}
+
+.footer .footer-list .logo img {
+    width: 2.5rem;
+    padding-right: 5px;
+}
+
+.footer .footer-list .logo span {
+    display: inline-block;
+    font-size: 2rem;
+}
+
+.footer .footer-list .logo p {
+    padding: 30px 0;
+    line-height: 2rem;
+    font-size: 1.1rem;
+}
+
+.footer .footer-list .logo i {
+    font-size: 1.5rem;
+    background-color: var(--grey-color);
+    border-radius: 50%;
+    padding: 10px;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.footer .footer-list .logo i:hover {
+    color: var(--green-light-shade);
+}
+
+.footer .footer-list h3 {
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+}
+
+.footer .footer-list li {
+    list-style: none;
+    margin-top: 20px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.footer .footer-list li:hover {
+    color: var(--green-light-shade);
+}
+
+.footer .footer-list input {
+    background-color: var(--light-grey-color);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+}
+
+.footer .footer-list input::placeholder {
+    color: white;
+    opacity: .8;
+}
+
+/* < !-- ---------------------------------------------- footer end ----------------------------------------- -- > */
+
+
+
+
+/* ---------------------------------------------- responsive design -------------------------------------------- */
+
+
+
+/* for the width of 1380px */
+
+
+
+@media (max-width: 1380px) {
+
+    .main .main-wrapper .main-left h1,
+    .main .main-wrapper .main-left h2 {
+        font-size: 3rem;
+    }
+
+    .main .main-wrapper {
+        padding: 80px 0;
+    }
+}
+
+@media (max-width: 1150px) {
+    .main .main-wrapper {
+        padding: 70px 0;
+    }
+
+    nav,
+    .main .main-wrapper,
+    .clients,
+    .community,
+    .help-local .help-local-wrapper,
+    .design,
+    .tesla .tesla-wrapper,
+    .caring {
+        width: 90%;
+    }
+
+    .community-br {
+        display: none;
+    }
+
+    .help-local .help-local-wrapper .help-right-info .help i {
+        font-size: 1.5rem;
+    }
+
+    .help-local .help-local-wrapper .help-right-info .help .help-numbers h2 {
+        font-size: 1.2rem;
+    }
+
+    .tesla .tesla-wrapper .tesla-left {
+        flex-basis: 40%;
+    }
+
+    .tesla .tesla-wrapper .tesla-right {
+        flex-basis: 55%;
+        height: auto;
+    }
+
+    .tesla .tesla-link i {
+        font-size: 1.5rem;
+    }
+
+    .tesla .tesla-link h3 {
+        padding-top: 8px;
+        font-size: 1.2rem;
+    }
+
+    .tesla .tesla-link .fa-arrow-right {
+        font-size: 0.9rem;
+    }
+
+    .footer .footer-list {
+        padding: 30px 5% 50px;
+    }
+}
+
+
+
+/* for the width of 850px */
+
+
+
+@media (max-width:850px) {
+    nav .nav-right .fa-xmark {
+        display: block;
+        font-size: 2.5rem;
+        color: white;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: end;
+        padding-right: 50px;
+        cursor: pointer;
+    }
+
+    nav .nav-right ul li .active::after {
+        height: 0;
+        margin: -5px;
+    }
+
+    nav .nav-right ul li a:hover {
+        color: white;
+    }
+
+    nav .nav-right ul li a:hover::after {
+        width: 0;
+    }
+
+    nav button {
+        display: none;
+    }
+
+    nav .nav-right ul {
+        margin: 0;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        flex-direction: column;
+        width: 300px;
+        height: 100vh;
+        background-color: var(--green-light-shade);
+        padding: 20px 0 0 40px;
+        z-index: 2;
+        transition: .5s;
+    }
+
+    /* for nav toggle  */
+    nav .nav-right .show-nav {
+        right: 0;
+    }
+
+    nav .nav-right ul li a {
+        color: white;
+    }
+
+    nav .nav-right ul li .active {
+        color: white;
+    }
+
+    nav .fa-bars {
+        display: block;
+        font-size: 1.8rem;
+        color: var(--secondary-color);
+    }
+
+    .main .main-wrapper .main-left h1 {
+        padding-top: 20px;
+    }
+
+    .main .main-wrapper .main-left h1,
+    .main .main-wrapper .main-left h2 {
+        font-size: 2.2rem;
+    }
+
+    .main .main-wrapper .main-left p {
+        font-size: .9rem;
+    }
+
+    button {
+        padding: 8px 20px;
+        font-size: .8rem;
+    }
+
+    .clients h1,
+    .community h1,
+    .community .pixelgrade-info .pixelgrade-right h1,
+    .help-local .help-local-wrapper .help-left-info h1,
+    .help-local .help-local-wrapper .help-left-info h2,
+    .design .design-right h1,
+    .caring h1,
+    .footer h1,
+    .footer .footer-list .logo span {
+        font-size: 1.8rem;
+    }
+
+    .clients p,
+    .community p,
+    .community .pixelgrade-info .pixelgrade-right p,
+    .help-local .help-local-wrapper .help-left-info p,
+    .design .design-right p,
+    .caring p,
+    .footer .footer-list .logo p,
+    .footer .footer-list li {
+        font-size: .9rem;
+    }
+
+    .clients .clients-logo {
+        font-size: 1.8rem;
+    }
+
+    .community .pixelgrade-info .pixelgrade-left {
+        flex-basis: 40%;
+    }
+
+    .community .pixelgrade-info .pixelgrade-right {
+        flex-basis: 55%;
+    }
+
+    .help-local {
+        padding: 50px 0;
+    }
+
+    .design .design-left {
+        flex-basis: 40%;
+    }
+
+    .tesla .tesla-wrapper .tesla-right p {
+        line-height: 1.2rem;
+        font-size: .9rem;
+    }
+
+    .caring p {
+        width: 80%;
+    }
+
+    .footer .footer-list .logo i {
+        font-size: .9rem;
+        margin-right: 5px;
+    }
+
+    .footer .footer-list h3 {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* for the width of 768px */
+
+
+
+@media (max-width: 768px) {
+    .main .main-wrapper {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 30px 0;
+    }
+
+    .main .main-wrapper .main-right img {
+        height: 50%;
+        width: 50%;
+    }
+
+    .main .indicator {
+        top: -10px;
+    }
+
+    .clients {
+        width: 80%;
+    }
+
+    .clients .clients-logo {
+        justify-content: center;
+    }
+
+    .community {
+        margin: 50px auto 0;
+    }
+
+    .community .pixelgrade-info {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .community .pixelgrade-info .pixelgrade-right {
+        text-align: center;
+        width: 80%;
+        margin: auto;
+    }
+
+    .community .pixelgrade-info .pixelgrade-left img {
+        height: 50%;
+        width: 50%;
+    }
+
+    .help-local {
+        margin-top: 50px;
+    }
+
+    .help-local .help-local-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .help-local .help-local-wrapper .help-right-info {
+        margin: auto;
+    }
+
+    .design {
+        flex-direction: column;
+        text-align: center;
+        margin: 50px auto 0;
+        width: 80%;
+    }
+
+    .design .design-right h1 {
+        padding-top: 30px;
+    }
+
+    .design .design-left img {
+        height: 50%;
+        width: 50%;
+    }
+
+    .tesla {
+        margin-top: 50px;
+    }
+
+    .tesla .tesla-wrapper {
+        flex-direction: column;
+        text-align: center;
+        width: 80%;
+    }
+
+    .tesla .tesla-wrapper .tesla-left img {
+        height: 50%;
+        width: 50%;
+        padding-bottom: 20px;
+    }
+
+    .overflow-maintain {
+        width: 80%;
+    }
+
+    .slide {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .slide-right h1 {
+        font-size: 1.5rem;
+    }
+
+    .prev-btn {
+        left: 2%;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: var(--green-shade-color);
+        border-radius: 50%;
+    }
+
+    .next-btn {
+        right: 2%;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: var(--green-shade-color);
+        border-radius: 50%;
+    }
+
+    .footer .footer-list {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer .footer-list h3 {
+        padding-top: 30px;
+    }
+
+    .tesla-link {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .caring p {
+        width: 100%
+    }
+}
+
+
+/* for the width of 425px */
+
+
+
+@media (max-width:425px) {
+
+    .clients h1,
+    .community h1,
+    .community .pixelgrade-info .pixelgrade-right h1,
+    .help-local .help-local-wrapper .help-left-info h1,
+    .help-local .help-local-wrapper .help-left-info h2,
+    .design .design-right h1,
+    .caring h1,
+    .footer h1,
+    .footer .footer-list .logo span {
+        font-size: 1.4rem;
+    }
+
+    .community .pixelgrade-info .pixelgrade-right {
+        width: 100%;
+    }
+
+    .help-local .help-local-wrapper .help-right-info .help i {
+        font-size: 1.2rem;
+    }
+
+    .help-local .help-local-wrapper .help-right-info .help {
+        gap: 15px;
+    }
+}
+
+
+/* ---------------------------------------------- responsive design end -------------------------------------------- */
